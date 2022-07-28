@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="http://fonts.cdnfonts.com/css/xhers" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            font-family: 'Xhers', sans-serif;
+            font-size: 18pt;
+            background: -webkit-gradient(linear, left center, right center, from(#74EBD5), to(#9FACE6)) fixed;
+            padding: 100px;
+            text-align: center;
+        }
+        input{
+            font-family: 'Xhers', sans-serif;
+            font-size: 15pt;
+            text-align: center;
+            width: 100px;
+            border-radius: 10% 10% 10% 10% / 10px
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do veículo: <input type="number" name="velocidade" id="txtvelocidade"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular(){
+            var txtv = window.document.getElementById('txtvelocidade')
+            var velocidade = Number(txtv.value)
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = `<p>Sua velocidade foi de ${velocidade}km/h.</p>`
+            if(velocidade > 60){
+                res.innerHTML += `<p>Portanto, você foi MULTADO, considerando o limite de velocidade igual a 60km/h.</p>`
+            }
+            else{
+                res.innerHTML += `<p>Portanto, você estava abaixo do limite de velocidade e não foi multado.`
+            }
+            res.innerHTML += `<p>Dirija sempre com segurança.`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+body{
+    background: -webkit-gradient(linear, left top, left bottom, from(#667eea), to(#764ba2)) fixed;
+    font-family: 'CHEDROS', sans-serif;
+    font-size: 18pt;
+}
+header{
+    text-align: center;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.521);
+}
+footer{
+    text-align: center;
+    font-style: italic;
+    font-size: 14pt;
+}
